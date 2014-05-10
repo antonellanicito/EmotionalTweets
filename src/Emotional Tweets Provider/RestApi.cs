@@ -24,6 +24,9 @@ namespace Emotional_Tweets_Provider
         }
 
 
+
+
+
         private string createRequest(string queryString)
         {
             string UrlRequest = restApiUrl + System.Web.HttpUtility.HtmlEncode(queryString);
