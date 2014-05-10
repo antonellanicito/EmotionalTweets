@@ -1,0 +1,26 @@
+﻿@model List<Emotional_Tweets_Model.Tweet>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using (Html.BeginForm())
+{   
+    <table>
+        <tr style="height:50px;"><td colspan="3">&nbsp; </td></tr>
+        <tr>
+            <td style="width:50px;"></td>
+            <td>
+                <input type="text" name="txtSearch"  runat="server"/>
+            </td>
+            <td>
+               <input  type="submit" value="search" />
+            </td>
+        </tr>
+        @if (Model.Any())
+        {
+        }
+        
+    </table>
+}
+

@@ -1,0 +1,51 @@
+D:\Progetti\Private\Emotional Tweets\Emotional Tweets Web\Emotional Tweets Web\bin\Emotional Tweets Web.dll
+D:\Progetti\Private\Emotional Tweets\Emotional Tweets Web\Emotional Tweets Web\bin\Emotional Tweets Web.pdb
+D:\Progetti\Private\Emotional Tweets\Emotional Tweets Web\Emotional Tweets Web\bin\Antlr3.Runtime.dll
+D:\Progetti\Private\Emotional Tweets\Emotional Tweets Web\Emotional Tweets Web\bin\Emotional Tweets Model.dll
+D:\Progetti\Private\Emotional Tweets\Emotional Tweets Web\Emotional Tweets Web\bin\Emotional Tweets Provider.dll
+D:\Progetti\Private\Emotional Tweets\Emotional Tweets Web\Emotional Tweets Web\bin\EntityFramework.dll
+D:\Progetti\Private\Emotional Tweets\Emotional Tweets Web\Emotional Tweets Web\bin\Microsoft.Web.Infrastructure.dll
+D:\Progetti\Private\Emotional Tweets\Emotional Tweets Web\Emotional Tweets Web\bin\Newtonsoft.Json.dll
+D:\Progetti\Private\Emotional Tweets\Emotional Tweets Web\Emotional Tweets Web\bin\System.Net.Http.dll
+D:\Progetti\Private\Emotional Tweets\Emotional Tweets Web\Emotional Tweets Web\bin\System.Net.Http.Formatting.dll
+D:\Progetti\Private\Emotional Tweets\Emotional Tweets Web\Emotional Tweets Web\bin\System.Net.Http.WebRequest.dll
+D:\Progetti\Private\Emotional Tweets\Emotional Tweets Web\Emotional Tweets Web\bin\System.Web.Http.dll
+D:\Progetti\Private\Emotional Tweets\Emotional Tweets Web\Emotional Tweets Web\bin\System.Web.Http.WebHost.dll
+D:\Progetti\Private\Emotional Tweets\Emotional Tweets Web\Emotional Tweets Web\bin\System.Web.Mvc.dll
+D:\Progetti\Private\Emotional Tweets\Emotional Tweets Web\Emotional Tweets Web\bin\System.Web.Optimization.dll
+D:\Progetti\Private\Emotional Tweets\Emotional Tweets Web\Emotional Tweets Web\bin\System.Web.Providers.dll
+D:\Progetti\Private\Emotional Tweets\Emotional Tweets Web\Emotional Tweets Web\bin\System.Web.Razor.dll
+D:\Progetti\Private\Emotional Tweets\Emotional Tweets Web\Emotional Tweets Web\bin\System.Web.WebPages.Deployment.dll
+D:\Progetti\Private\Emotional Tweets\Emotional Tweets Web\Emotional Tweets Web\bin\System.Web.WebPages.dll
+D:\Progetti\Private\Emotional Tweets\Emotional Tweets Web\Emotional Tweets Web\bin\System.Web.WebPages.Razor.dll
+D:\Progetti\Private\Emotional Tweets\Emotional Tweets Web\Emotional Tweets Web\bin\WebGrease.dll
+D:\Progetti\Private\Emotional Tweets\Emotional Tweets Web\Emotional Tweets Web\bin\Emotional Tweets Model.pdb
+D:\Progetti\Private\Emotional Tweets\Emotional Tweets Web\Emotional Tweets Web\bin\Emotional Tweets Provider.pdb
+D:\Progetti\Private\Emotional Tweets\Emotional Tweets Web\Emotional Tweets Web\bin\EntityFramework.xml
+D:\Progetti\Private\Emotional Tweets\Emotional Tweets Web\Emotional Tweets Web\bin\Newtonsoft.Json.xml
+D:\Progetti\Private\Emotional Tweets\Emotional Tweets Web\Emotional Tweets Web\bin\System.Net.Http.xml
+D:\Progetti\Private\Emotional Tweets\Emotional Tweets Web\Emotional Tweets Web\bin\System.Net.Http.Formatting.xml
+D:\Progetti\Private\Emotional Tweets\Emotional Tweets Web\Emotional Tweets Web\bin\System.Net.Http.WebRequest.xml
+D:\Progetti\Private\Emotional Tweets\Emotional Tweets Web\Emotional Tweets Web\bin\System.Web.Http.xml
+D:\Progetti\Private\Emotional Tweets\Emotional Tweets Web\Emotional Tweets Web\bin\System.Web.Http.WebHost.xml
+D:\Progetti\Private\Emotional Tweets\Emotional Tweets Web\Emotional Tweets Web\bin\System.Web.Mvc.xml
+D:\Progetti\Private\Emotional Tweets\Emotional Tweets Web\Emotional Tweets Web\bin\System.Web.Razor.xml
+D:\Progetti\Private\Emotional Tweets\Emotional Tweets Web\Emotional Tweets Web\bin\System.Web.WebPages.xml
+D:\Progetti\Private\Emotional Tweets\Emotional Tweets Web\Emotional Tweets Web\bin\System.Web.WebPages.Deployment.xml
+D:\Progetti\Private\Emotional Tweets\Emotional Tweets Web\Emotional Tweets Web\bin\System.Web.WebPages.Razor.xml
+D:\Progetti\Private\Emotional Tweets\Emotional Tweets Web\Emotional Tweets Web\bin\it\EntityFramework.resources.dll
+D:\Progetti\Private\Emotional Tweets\Emotional Tweets Web\Emotional Tweets Web\bin\it\System.Net.Http.resources.dll
+D:\Progetti\Private\Emotional Tweets\Emotional Tweets Web\Emotional Tweets Web\bin\it\System.Net.Http.Formatting.resources.dll
+D:\Progetti\Private\Emotional Tweets\Emotional Tweets Web\Emotional Tweets Web\bin\it\System.Net.Http.WebRequest.resources.dll
+D:\Progetti\Private\Emotional Tweets\Emotional Tweets Web\Emotional Tweets Web\bin\it\System.Web.Http.resources.dll
+D:\Progetti\Private\Emotional Tweets\Emotional Tweets Web\Emotional Tweets Web\bin\it\System.Web.Http.WebHost.resources.dll
+D:\Progetti\Private\Emotional Tweets\Emotional Tweets Web\Emotional Tweets Web\bin\it\System.Web.Mvc.resources.dll
+D:\Progetti\Private\Emotional Tweets\Emotional Tweets Web\Emotional Tweets Web\bin\it\System.Web.Optimization.resources.dll
+D:\Progetti\Private\Emotional Tweets\Emotional Tweets Web\Emotional Tweets Web\bin\it\System.Web.Providers.resources.dll
+D:\Progetti\Private\Emotional Tweets\Emotional Tweets Web\Emotional Tweets Web\bin\it\System.Web.Razor.resources.dll
+D:\Progetti\Private\Emotional Tweets\Emotional Tweets Web\Emotional Tweets Web\bin\it\System.Web.WebPages.resources.dll
+D:\Progetti\Private\Emotional Tweets\Emotional Tweets Web\Emotional Tweets Web\bin\it\System.Web.WebPages.Deployment.resources.dll
+D:\Progetti\Private\Emotional Tweets\Emotional Tweets Web\Emotional Tweets Web\bin\it\System.Web.WebPages.Razor.resources.dll
+D:\Progetti\Private\Emotional Tweets\Emotional Tweets Web\Emotional Tweets Web\obj\Debug\ResolveAssemblyReference.cache
+D:\Progetti\Private\Emotional Tweets\Emotional Tweets Web\Emotional Tweets Web\obj\Debug\Emotional Tweets Web.dll
+D:\Progetti\Private\Emotional Tweets\Emotional Tweets Web\Emotional Tweets Web\obj\Debug\Emotional Tweets Web.pdb

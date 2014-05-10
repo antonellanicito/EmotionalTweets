@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Emotional Tweets Web", "Emotional Tweets Web\Emotional Tweets Web.csproj", "{9A0489F1-1DF3-4B23-998E-3488DB5DCC17}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Emotional Tweets Provider", "Emotional Tweets Provider\Emotional Tweets Provider.csproj", "{E3E2B130-7D29-4288-89F5-0F8050BA5617}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Emotional Tweets Model", "Emotional Tweets Model\Emotional Tweets Model.csproj", "{06E4BE81-B39F-4754-9870-15D612BA308B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9A0489F1-1DF3-4B23-998E-3488DB5DCC17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A0489F1-1DF3-4B23-998E-3488DB5DCC17}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A0489F1-1DF3-4B23-998E-3488DB5DCC17}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A0489F1-1DF3-4B23-998E-3488DB5DCC17}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E3E2B130-7D29-4288-89F5-0F8050BA5617}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E3E2B130-7D29-4288-89F5-0F8050BA5617}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E3E2B130-7D29-4288-89F5-0F8050BA5617}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E3E2B130-7D29-4288-89F5-0F8050BA5617}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06E4BE81-B39F-4754-9870-15D612BA308B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06E4BE81-B39F-4754-9870-15D612BA308B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06E4BE81-B39F-4754-9870-15D612BA308B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06E4BE81-B39F-4754-9870-15D612BA308B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
