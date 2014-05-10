@@ -3,3 +3,7 @@ D:\Progetti\Private\Emotional Tweets\Emotional Tweets Web\Emotional Tweets Model
 D:\Progetti\Private\Emotional Tweets\Emotional Tweets Web\Emotional Tweets Model\obj\Debug\ResolveAssemblyReference.cache
 D:\Progetti\Private\Emotional Tweets\Emotional Tweets Web\Emotional Tweets Model\obj\Debug\Emotional Tweets Model.dll
 D:\Progetti\Private\Emotional Tweets\Emotional Tweets Web\Emotional Tweets Model\obj\Debug\Emotional Tweets Model.pdb
+D:\Progetti\Private\EmotionalTweets\EmotionalTweetsWeb\EmotionalTweets\src\Emotional Tweets Model\bin\Debug\Emotional Tweets Model.dll
+D:\Progetti\Private\EmotionalTweets\EmotionalTweetsWeb\EmotionalTweets\src\Emotional Tweets Model\bin\Debug\Emotional Tweets Model.pdb
+D:\Progetti\Private\EmotionalTweets\EmotionalTweetsWeb\EmotionalTweets\src\Emotional Tweets Model\obj\Debug\Emotional Tweets Model.dll
+D:\Progetti\Private\EmotionalTweets\EmotionalTweetsWeb\EmotionalTweets\src\Emotional Tweets Model\obj\Debug\Emotional Tweets Model.pdb

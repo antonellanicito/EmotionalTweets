@@ -13,16 +13,20 @@ namespace Emotional_Tweets_Web.Controllers
     {
         //
         // GET: /Home/
-
+        
         public ActionResult Index()
         {
             List<Tweet> model = new List<Tweet>();
-            if (!string.IsNullOrEmpty(Request.Form["txtSearch"]))
+            try
             {
-                RestApi restApi = new RestApi();
-                model = restApi.GetTweets(Request.Form["txtSearch"]);
-                    
+                if (!string.IsNullOrEmpty(Request.Form["txtSearch"]))
+                {
+                    RestApi restApi = new RestApi();
+                    model = restApi.GetTweets(Request.Form["txtSearch"]);
+
+                }
             }
+            catch { }
             return View(model);
         }
            }
