@@ -6,13 +6,17 @@ using System.Web.Mvc;
 using Newtonsoft.Json.Linq;
 using Emotional_Tweets_Model;
 using Emotional_Tweets_Provider;
-
+using Emotional_Tweets_Provider.Contracts;
 namespace Emotional_Tweets_Web.Controllers
 {
     public class HomeController : Controller
     {
         //
-        // GET: /Home/
+        private IRestApi restApi;
+
+
+
+
         
         public ActionResult Index()
         {

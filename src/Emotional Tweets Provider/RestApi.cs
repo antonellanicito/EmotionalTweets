@@ -48,18 +48,6 @@ namespace Emotional_Tweets_Provider
 
         }
 
-        private HappyNess GetTweetHappyness(Tweet tweet)
-        {
-            HappyNess levelHappyness = HappyNess.None;
-            Dictionary<string, string> parameters = new Dictionary<string, string>();
-            parameters.Add("lang", tweet.language.ToLower());
-            parameters.Add("text", tweet.Text);
-            HttpWebRequest request = Utils.WebManager.CreateRequest(mashapeApiUrl, null, "POST", "X-Mashape-Authorization  " + mashapeToken, parameters);
-
-            string response = Utils.WebManager.GetResponse(request);
-            //to be continued....
-            return levelHappyness;
-        }
 
         #region "Private Mehods"
 
@@ -79,6 +67,18 @@ namespace Emotional_Tweets_Provider
                                         }).ToList();
 
             return result;
+        }
+        private HappyNess GetTweetHappyness(Tweet tweet)
+        {
+            HappyNess levelHappyness = HappyNess.None;
+            Dictionary<string, string> parameters = new Dictionary<string, string>();
+            parameters.Add("lang", tweet.language.ToLower());
+            parameters.Add("text", tweet.Text);
+            HttpWebRequest request = Utils.WebManager.CreateRequest(mashapeApiUrl, null, "POST", "X-Mashape-Authorization  " + mashapeToken, parameters);
+
+            string response = Utils.WebManager.GetResponse(request);
+            //to be continued....
+            return levelHappyness;
         }
 
         
