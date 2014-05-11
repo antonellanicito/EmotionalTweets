@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -26,41 +27,63 @@ namespace Emotional_Tweets_Provider
 
         private string restApiUrl = "https://api.twitter.com/1.1/search/tweets.json?src=typd&q=";
         //example = "https://api.twitter.com/1.1/search/tweets.json?src=typd&q=%40twitterapi"
-
-        private string token;
-
+        private string mashapeApiUrl = "https://sentimentalsentimentanalysis.p.mashape.com/sentiment/current/classify_text/";
+        private string twitterToken;
+        private string mashapeToken;
         public RestApi()
         {
             //token = getToken();
-            token = ConfigurationManager.AppSettings["Token"];
-            
+            twitterToken = ConfigurationManager.AppSettings["token"];
+            mashapeToken = ConfigurationManager.AppSettings["mashapeToken"];
         }
+
         public List<Tweet> GetTweets(string input)
-        { 
-            
+        {
+
             List<Tweet> result = new List<Tweet>();
-            string request = createRequestUrl(input);
-            string response = MakeRequest(request, "GET");
+            HttpWebRequest request = Utils.WebManager.CreateRequest(restApiUrl, input, "GET", "Bearer  " + twitterToken, null);
+            string response = Utils.WebManager.GetResponse(request);
+            return transformJson(response);
+
+
+        }
+
+        private HappyNess GetTweetHappyness(Tweet tweet)
+        {
+            HappyNess levelHappyness = HappyNess.None;
+            Dictionary<string, string> parameters = new Dictionary<string, string>();
+            parameters.Add("lang", tweet.language.ToLower());
+            parameters.Add("text", tweet.Text);
+            HttpWebRequest request = Utils.WebManager.CreateRequest(mashapeApiUrl, null, "POST", "X-Mashape-Authorization  " + mashapeToken, parameters);
+
+            string response = Utils.WebManager.GetResponse(request);
+
+            return levelHappyness;
+        }
+
+        #region "Private Mehods"
+
+        private List<Tweet> transformJson(string json)
+        {
+            List<Tweet> result = new List<Tweet>();
+            var serializer = new JavaScriptSerializer();
+            List<Dictionary<string, Object>> statuses = ((ArrayList)serializer.Deserialize<Dictionary<string, Object>>(json).ToArray()[0].Value).ToArray()
+                    .Select(c => (Dictionary<string, Object>)c).ToList();
+
+            result = statuses.Select(c => new Tweet 
+                                        {
+                                            Id = Convert.ToInt64( c["id"]),
+                                            Text = c["text"].ToString(),
+                                            language = c["lang"].ToString()
+
+                                        }).ToList();
+
             return result;
         }
 
+        
 
-        private string createRequestUrl(string queryString)
-        {
-            string UrlRequest = restApiUrl + System.Web.HttpUtility.HtmlEncode(queryString);
-               return (UrlRequest);
-        }
-
-        private string MakeRequest(string requestUrl, string method)
-        {
-            HttpWebRequest request = WebRequest.Create(requestUrl) as HttpWebRequest;
-            request.Headers.Add("Authorization", "Bearer  " + token);
-            request.Method = method;
-            WebResponse response = (WebResponse) request.GetResponse();
-
-           return "";
-          }
-
+        #endregion
         #region "Token -  I used this method just one time to get token from twitter, and I put it app.config"
         private string getToken()
         {
@@ -112,8 +135,36 @@ namespace Emotional_Tweets_Provider
         }
         #endregion
 
+        #region "Old Mehods"
+        //public List<Tweet> GetTweets(string input)
+        //{ 
 
-        }
+        //    List<Tweet> result = new List<Tweet>();
+        //    string request = createRequestUrl(input);
+        //    string response = GetResponse(request, "GET", "Bearer  " + token);
+        //    return transformJson(response);
+
+
+        //}
+        //private string GetResponse(string requestUrl, string method, string auth)
+        //{
+        //    HttpWebRequest request = WebRequest.Create(requestUrl) as HttpWebRequest;
+        //    request.Headers.Add("Authorization", auth);
+        //    request.Method = method;
+        //    WebResponse response = (WebResponse)request.GetResponse();
+        //    string jsonResponse = String.Empty;
+
+        //    using (Stream responseStream = response.GetResponseStream())
+        //    {
+        //        StreamReader reader = new StreamReader(responseStream, Encoding.UTF8);
+        //        jsonResponse = reader.ReadToEnd();
+
+
+        //    }
+        //    return jsonResponse;
+        //}
+        #endregion
+    }
 
    }
 

@@ -8,5 +8,6 @@ namespace Emotional_Tweets_Provider.Contracts
     public interface IRestApi
     {
         List<Tweet> GetTweets(string input);
+        
     }
 }
