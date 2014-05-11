@@ -25,7 +25,7 @@ namespace Emotional_Tweets_Web.Controllers
             {
                 if (!string.IsNullOrEmpty(Request.Form["txtSearch"]))
                 {
-                    RestApi restApi = new RestApi();
+                    restApi = new RestApi();
                     model = restApi.GetTweets(Request.Form["txtSearch"]);
 
                 }
