@@ -10,9 +10,10 @@ namespace Emotional_Tweets_Model
         public Int64 Id { get; set; }
         public string Text { get; set; }
         public string language { get; set; }
-
+        public DateTime creationDate { get; set; }
         
         public HappyNess LevelHappyNess { get; set; }
+        public User User { get; set; }
     }
 
     public enum HappyNess

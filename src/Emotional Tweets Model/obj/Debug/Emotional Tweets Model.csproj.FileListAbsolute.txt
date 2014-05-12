@@ -7,3 +7,4 @@ D:\Progetti\Private\EmotionalTweets\EmotionalTweetsWeb\EmotionalTweets\src\Emoti
 D:\Progetti\Private\EmotionalTweets\EmotionalTweetsWeb\EmotionalTweets\src\Emotional Tweets Model\bin\Debug\Emotional Tweets Model.pdb
 D:\Progetti\Private\EmotionalTweets\EmotionalTweetsWeb\EmotionalTweets\src\Emotional Tweets Model\obj\Debug\Emotional Tweets Model.dll
 D:\Progetti\Private\EmotionalTweets\EmotionalTweetsWeb\EmotionalTweets\src\Emotional Tweets Model\obj\Debug\Emotional Tweets Model.pdb
+D:\Progetti\Private\EmotionalTweets\EmotionalTweetsWeb\EmotionalTweets\src\Emotional Tweets Model\obj\Debug\Emotional Tweets Model.csprojResolveAssemblyReference.cache

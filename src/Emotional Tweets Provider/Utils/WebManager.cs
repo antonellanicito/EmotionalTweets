@@ -18,12 +18,12 @@ namespace Emotional_Tweets_Provider.Utils
     public static class WebManager
     {
         
-        public static HttpWebRequest CreateRequest(string url, string queryString, string method, string auth, Dictionary<string, string> fields)
+        public static HttpWebRequest CreateRequest(string url, string queryString, string method, string typeAuth, string auth, Dictionary<string, string> fields)
         {
 
             string UrlRequest = url + (!string.IsNullOrEmpty(queryString) ? System.Web.HttpUtility.HtmlEncode(queryString) : "");
             HttpWebRequest request = WebRequest.Create(UrlRequest) as HttpWebRequest;
-            request.Headers.Add("Authorization", auth);
+            request.Headers.Add(typeAuth, auth);
             request.Method = method;
             if (fields != null)
             {

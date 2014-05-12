@@ -41,7 +41,7 @@ namespace Emotional_Tweets_Provider
         {
 
             List<Tweet> result = new List<Tweet>();
-            HttpWebRequest request = Utils.WebManager.CreateRequest(restApiUrl, input, "GET", "Bearer  " + twitterToken, null);
+            HttpWebRequest request = Utils.WebManager.CreateRequest(restApiUrl, input, "GET", "Authorization", "Bearer  " + twitterToken, null);
             string response = Utils.WebManager.GetResponse(request);
             return transformJson(response);
 
@@ -58,31 +58,81 @@ namespace Emotional_Tweets_Provider
             List<Dictionary<string, Object>> statuses = ((ArrayList)serializer.Deserialize<Dictionary<string, Object>>(json).ToArray()[0].Value).ToArray()
                     .Select(c => (Dictionary<string, Object>)c).ToList();
 
-            result = statuses.Select(c => new Tweet 
+            result = statuses.Select(c => new Tweet
                                         {
-                                            Id = Convert.ToInt64( c["id"]),
+                                            Id = Convert.ToInt64(c["id"]),
                                             Text = c["text"].ToString(),
-                                            language = c["lang"].ToString()
-
-                                        }).ToList();
-
+                                            language = c["lang"].ToString(),
+                                            creationDate = decodeDate(c["created_at"].ToString()),
+                                            User = new User((Dictionary<string, Object>)c["user"])
+                                        })
+                                        .Select(t => new Tweet
+                                                {
+                                                    Id = t.Id,
+                                                    Text = t.Text,
+                                                    language = t.language,
+                                                    creationDate = t.creationDate,
+                                                    User = t.User,
+                                                    LevelHappyNess = GetTweetHappyness(t)
+                                                }
+                                                ).ToList();
             return result;
+
         }
         private HappyNess GetTweetHappyness(Tweet tweet)
         {
-            HappyNess levelHappyness = HappyNess.None;
-            Dictionary<string, string> parameters = new Dictionary<string, string>();
-            parameters.Add("lang", tweet.language.ToLower());
-            parameters.Add("text", tweet.Text);
-            HttpWebRequest request = Utils.WebManager.CreateRequest(mashapeApiUrl, null, "POST", "X-Mashape-Authorization  " + mashapeToken, parameters);
+            try
+            {
+                Dictionary<string, string> parameters = new Dictionary<string, string>();
+                parameters.Add("lang", tweet.language.ToLower());
+                parameters.Add("text", tweet.Text);
+                HttpWebRequest request = Utils.WebManager.CreateRequest(mashapeApiUrl, null, "POST", "X-Mashape-Authorization", mashapeToken, parameters);
 
-            string response = Utils.WebManager.GetResponse(request);
-            //to be continued....
-            return levelHappyness;
+                string response = Utils.WebManager.GetResponse(request);
+
+                return decodeHappyness(response);
+            }
+            catch 
+            {
+                return HappyNess.None;
+            }
         }
 
-        
+        private HappyNess decodeHappyness(string jsonResponse)
+        {
+            var serializer = new JavaScriptSerializer();
+            var json = serializer.Deserialize<Dictionary<string, string>>(jsonResponse);
+            var sent = json["sent"];
+            var value = json["value"];
 
+            System.Globalization.CultureInfo culInfo = new System.Globalization.CultureInfo("en");
+            Double decValue, decValueMin, decValueMax ;
+            bool decValid = Double.TryParse(value, System.Globalization.NumberStyles.Number, culInfo.NumberFormat, out decValue)
+                            & Double.TryParse("-0.5", System.Globalization.NumberStyles.Number, culInfo.NumberFormat, out decValueMin)
+                            & Double.TryParse("0.5", System.Globalization.NumberStyles.Number, culInfo.NumberFormat, out decValueMax);
+
+            if (decValid)
+            {
+                if (decValue.CompareTo(decValueMax) <= 0 | decValue.CompareTo(decValueMin) >= 0)
+                    return HappyNess.Indifferent;
+                else
+                    return Double.Parse(sent, culInfo) > 0 ? HappyNess.Happy : HappyNess.Sad;
+            }
+            return HappyNess.None;
+        }
+        private DateTime decodeDate(string strDate)
+        {   
+
+            
+            DateTime dateresult = new DateTime();
+            List<string> time;
+            List<string> date = strDate.Trim().Split(' ').ToList();
+            
+            dateresult = Convert.ToDateTime(date[1] + "-" + date[2] + "-" + date[5]);
+            time = date[3].Split(':').ToList();
+            return dateresult.AddHours(Convert.ToDouble(time[0])).AddMinutes(Convert.ToDouble(time[1])).AddSeconds(Convert.ToDouble(time[2]));
+        }
+            
         #endregion
         #region "Token -  I used this method just one time to get token from twitter, and I put it app.config"
         private string getToken()
