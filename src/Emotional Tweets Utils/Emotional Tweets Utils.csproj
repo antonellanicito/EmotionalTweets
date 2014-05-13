@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{E3E2B130-7D29-4288-89F5-0F8050BA5617}</ProjectGuid>
+    <ProjectGuid>{87D222EE-4A46-4DFE-9F69-DC5FCC4703DD}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Emotional_Tweets_Provider</RootNamespace>
-    <AssemblyName>Emotional Tweets Provider</AssemblyName>
+    <RootNamespace>Emotional_Tweets_Utils</RootNamespace>
+    <AssemblyName>Emotional Tweets Utils</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -32,9 +32,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
-    <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Net.Http.WebRequest, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Extensions" />
@@ -46,25 +44,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="RestApi.cs" />
-    <Compile Include="Contracts\IRestApi.cs" />
+    <Compile Include="WebManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Emotional Tweets Model\Emotional Tweets Model.csproj">
-      <Project>{06E4BE81-B39F-4754-9870-15D612BA308B}</Project>
-      <Name>Emotional Tweets Model</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Emotional Tweets Utils\Emotional Tweets Utils.csproj">
-      <Project>{87D222EE-4A46-4DFE-9F69-DC5FCC4703DD}</Project>
-      <Name>Emotional Tweets Utils</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadata Include="Service References\" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

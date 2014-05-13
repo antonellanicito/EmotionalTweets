@@ -8,6 +8,7 @@ namespace Emotional_Tweets_Provider.Contracts
     public interface IRestApi
     {
         List<Tweet> GetTweets(string input);
+        HappyNess GetHappyness(string lang, string text);
         
     }
 }

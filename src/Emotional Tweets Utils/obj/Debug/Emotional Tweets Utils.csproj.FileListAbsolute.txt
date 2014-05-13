@@ -1,0 +1,13 @@
+D:\Progetti\Private\EmotionalTweets\EmotionalTweetsWeb\EmotionalTweets\src\Emotional Tweets Utils\bin\Debug\Emotional Tweets Utils.dll
+D:\Progetti\Private\EmotionalTweets\EmotionalTweetsWeb\EmotionalTweets\src\Emotional Tweets Utils\bin\Debug\Emotional Tweets Utils.pdb
+D:\Progetti\Private\EmotionalTweets\EmotionalTweetsWeb\EmotionalTweets\src\Emotional Tweets Utils\bin\Debug\System.Web.Http.dll
+D:\Progetti\Private\EmotionalTweets\EmotionalTweetsWeb\EmotionalTweets\src\Emotional Tweets Utils\bin\Debug\System.Net.Http.dll
+D:\Progetti\Private\EmotionalTweets\EmotionalTweetsWeb\EmotionalTweets\src\Emotional Tweets Utils\bin\Debug\System.Net.Http.Formatting.dll
+D:\Progetti\Private\EmotionalTweets\EmotionalTweetsWeb\EmotionalTweets\src\Emotional Tweets Utils\bin\Debug\System.Web.Http.xml
+D:\Progetti\Private\EmotionalTweets\EmotionalTweetsWeb\EmotionalTweets\src\Emotional Tweets Utils\bin\Debug\System.Net.Http.xml
+D:\Progetti\Private\EmotionalTweets\EmotionalTweetsWeb\EmotionalTweets\src\Emotional Tweets Utils\bin\Debug\System.Net.Http.Formatting.xml
+D:\Progetti\Private\EmotionalTweets\EmotionalTweetsWeb\EmotionalTweets\src\Emotional Tweets Utils\bin\Debug\it\System.Web.Http.resources.dll
+D:\Progetti\Private\EmotionalTweets\EmotionalTweetsWeb\EmotionalTweets\src\Emotional Tweets Utils\bin\Debug\it\System.Net.Http.resources.dll
+D:\Progetti\Private\EmotionalTweets\EmotionalTweetsWeb\EmotionalTweets\src\Emotional Tweets Utils\bin\Debug\it\System.Net.Http.Formatting.resources.dll
+D:\Progetti\Private\EmotionalTweets\EmotionalTweetsWeb\EmotionalTweets\src\Emotional Tweets Utils\obj\Debug\Emotional Tweets Utils.dll
+D:\Progetti\Private\EmotionalTweets\EmotionalTweetsWeb\EmotionalTweets\src\Emotional Tweets Utils\obj\Debug\Emotional Tweets Utils.pdb

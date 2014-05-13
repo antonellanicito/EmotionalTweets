@@ -70,6 +70,7 @@ D:\Progetti\Private\EmotionalTweets\EmotionalTweetsWeb\EmotionalTweets\src\Emoti
 D:\Progetti\Private\EmotionalTweets\EmotionalTweetsWeb\EmotionalTweets\src\Emotional Tweets Web\bin\System.Web.WebPages.dll
 D:\Progetti\Private\EmotionalTweets\EmotionalTweetsWeb\EmotionalTweets\src\Emotional Tweets Web\bin\System.Web.WebPages.Razor.dll
 D:\Progetti\Private\EmotionalTweets\EmotionalTweetsWeb\EmotionalTweets\src\Emotional Tweets Web\bin\WebGrease.dll
+D:\Progetti\Private\EmotionalTweets\EmotionalTweetsWeb\EmotionalTweets\src\Emotional Tweets Web\bin\Emotional Tweets Utils.dll
 D:\Progetti\Private\EmotionalTweets\EmotionalTweetsWeb\EmotionalTweets\src\Emotional Tweets Web\bin\Emotional Tweets Model.pdb
 D:\Progetti\Private\EmotionalTweets\EmotionalTweetsWeb\EmotionalTweets\src\Emotional Tweets Web\bin\Emotional Tweets Provider.pdb
 D:\Progetti\Private\EmotionalTweets\EmotionalTweetsWeb\EmotionalTweets\src\Emotional Tweets Web\bin\EntityFramework.xml
@@ -84,6 +85,7 @@ D:\Progetti\Private\EmotionalTweets\EmotionalTweetsWeb\EmotionalTweets\src\Emoti
 D:\Progetti\Private\EmotionalTweets\EmotionalTweetsWeb\EmotionalTweets\src\Emotional Tweets Web\bin\System.Web.WebPages.xml
 D:\Progetti\Private\EmotionalTweets\EmotionalTweetsWeb\EmotionalTweets\src\Emotional Tweets Web\bin\System.Web.WebPages.Deployment.xml
 D:\Progetti\Private\EmotionalTweets\EmotionalTweetsWeb\EmotionalTweets\src\Emotional Tweets Web\bin\System.Web.WebPages.Razor.xml
+D:\Progetti\Private\EmotionalTweets\EmotionalTweetsWeb\EmotionalTweets\src\Emotional Tweets Web\bin\Emotional Tweets Utils.pdb
 D:\Progetti\Private\EmotionalTweets\EmotionalTweetsWeb\EmotionalTweets\src\Emotional Tweets Web\bin\it\EntityFramework.resources.dll
 D:\Progetti\Private\EmotionalTweets\EmotionalTweetsWeb\EmotionalTweets\src\Emotional Tweets Web\bin\it\System.Net.Http.resources.dll
 D:\Progetti\Private\EmotionalTweets\EmotionalTweetsWeb\EmotionalTweets\src\Emotional Tweets Web\bin\it\System.Net.Http.Formatting.resources.dll

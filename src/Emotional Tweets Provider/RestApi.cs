@@ -12,7 +12,7 @@ using System.Web.Http;
 using System.Configuration;
 using System.IO;
 using System.Web.Script.Serialization;
-
+using Emotional_Tweets_Utils;
 namespace Emotional_Tweets_Provider
 
 {
@@ -41,13 +41,30 @@ namespace Emotional_Tweets_Provider
         {
 
             List<Tweet> result = new List<Tweet>();
-            HttpWebRequest request = Utils.WebManager.CreateRequest(restApiUrl, input, "GET", "Authorization", "Bearer  " + twitterToken, null);
-            string response = Utils.WebManager.GetResponse(request);
+            HttpWebRequest request = WebManager.CreateRequest(restApiUrl, input, "GET", "Authorization", "Bearer  " + twitterToken, null);
+            string response = WebManager.GetResponse(request);
             return transformJson(response);
 
 
         }
+        public HappyNess GetHappyness(string lang, string text)
+        {
+            try
+            {
+                Dictionary<string, string> parameters = new Dictionary<string, string>();
+                parameters.Add("lang", lang.ToLower());
+                parameters.Add("text", text);
+                HttpWebRequest request = WebManager.CreateRequest(mashapeApiUrl, null, "POST", "X-Mashape-Authorization", mashapeToken, parameters);
 
+                string response = WebManager.GetResponse(request);
+
+                return decodeHappyness(response);
+            }
+            catch
+            {
+                return HappyNess.None;
+            }
+        }
 
         #region "Private Mehods"
 
@@ -64,40 +81,12 @@ namespace Emotional_Tweets_Provider
                                             Text = c["text"].ToString(),
                                             language = c["lang"].ToString(),
                                             creationDate = decodeDate(c["created_at"].ToString()),
-                                            User = new User((Dictionary<string, Object>)c["user"])
-                                        })
-                                        .Select(t => new Tweet
-                                                {
-                                                    Id = t.Id,
-                                                    Text = t.Text,
-                                                    language = t.language,
-                                                    creationDate = t.creationDate,
-                                                    User = t.User,
-                                                    LevelHappyNess = GetTweetHappyness(t)
-                                                }
-                                                ).ToList();
+                                            User = new Emotional_Tweets_Model.User((Dictionary<string, Object>)c["user"]),
+                                            LevelHappyNess = GetHappyness(c["lang"].ToString(), c["text"].ToString())
+                                        }).ToList();
             return result;
 
         }
-        private HappyNess GetTweetHappyness(Tweet tweet)
-        {
-            try
-            {
-                Dictionary<string, string> parameters = new Dictionary<string, string>();
-                parameters.Add("lang", tweet.language.ToLower());
-                parameters.Add("text", tweet.Text);
-                HttpWebRequest request = Utils.WebManager.CreateRequest(mashapeApiUrl, null, "POST", "X-Mashape-Authorization", mashapeToken, parameters);
-
-                string response = Utils.WebManager.GetResponse(request);
-
-                return decodeHappyness(response);
-            }
-            catch 
-            {
-                return HappyNess.None;
-            }
-        }
-
         private HappyNess decodeHappyness(string jsonResponse)
         {
             var serializer = new JavaScriptSerializer();
@@ -212,6 +201,24 @@ namespace Emotional_Tweets_Provider
 
         //    }
         //    return jsonResponse;
+        //}
+        //private HappyNess GetTweetHappyness(Tweet tweet)
+        //{
+        //    try
+        //    {
+        //        Dictionary<string, string> parameters = new Dictionary<string, string>();
+        //        parameters.Add("lang", tweet.language.ToLower());
+        //        parameters.Add("text", tweet.Text);
+        //        HttpWebRequest request = Utils.WebManager.CreateRequest(mashapeApiUrl, null, "POST", "X-Mashape-Authorization", mashapeToken, parameters);
+
+        //        string response = Utils.WebManager.GetResponse(request);
+
+        //        return decodeHappyness(response);
+        //    }
+        //    catch 
+        //    {
+        //        return HappyNess.None;
+        //    }
         //}
         #endregion
     }
