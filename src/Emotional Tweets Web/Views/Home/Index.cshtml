@@ -1,4 +1,5 @@
-﻿@model List<Emotional_Tweets_Model.Tweet>
+﻿@using Emotional_Tweets_Model;
+@model List<Tweet>
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -12,13 +13,43 @@
             <td style="width:50px;"></td>
             <td>
                 <input type="text" name="txtSearch"  runat="server"/>
+                <input  type="submit" value="search" />
             </td>
             <td>
-               <input  type="submit" value="search" />
+               &nbsp;
             </td>
         </tr>
+        <tr style="height: 15px"><td colspan="3">&nbsp;</td></tr>
         @if (Model.Any())
         {
+            string happyness = "";
+            <tr>
+                <td colspan="3">
+                    <table border="1">
+                        <tr>
+                          <th>Date</th>
+                          <th>Text</th>
+                          <th>From</th>
+                          <th>Happyness</th>
+                       </tr>
+                        @foreach (Tweet tweet in Model)
+                        {
+                            happyness = (tweet.LevelHappyNess == HappyNess.None ? "" : "I am " + tweet.LevelHappyNess.ToString());
+                                           
+                          <tr>
+                            <td>@tweet.creationDate.ToShortDateString()</td>
+                            <td>@Html.Raw(tweet.Text)</td>
+                            <td>@tweet.User.Name</td>
+                            
+                            <td>@happyness</td>
+                          </tr>
+
+                        }
+
+                    </table>
+                </td>
+            </tr>
+            
         }
         
     </table>

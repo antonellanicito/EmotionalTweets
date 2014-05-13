@@ -113,7 +113,7 @@ namespace Emotional_Tweets_Provider
 
             if (decValid)
             {
-                if (decValue.CompareTo(decValueMax) <= 0 | decValue.CompareTo(decValueMin) >= 0)
+                if (decValue <= decValueMax && decValue >= decValueMin)
                     return HappyNess.Indifferent;
                 else
                     return Double.Parse(sent, culInfo) > 0 ? HappyNess.Happy : HappyNess.Sad;
