@@ -1,4 +1,15 @@
-projects inside solution:
+App Description: 
+Emotional Tweets allows a user to search recent tweets which will then be displayed showing the emotional context alongside.
+
+  1.  Allow users to enter search terms or hash tags
+
+  2.  Retrieve the tweets using the Twitter search REST API (https://dev.twitter.com/docs/api/1.1/get/search/tweets)
+
+  3.  Using the Sentimental API determine if the tweet is Happy / Sad / Indifferent (https://www.mashape.com/sentimental/sentiment-analysis-for-twitter-and-facebook#!documentation)
+
+
+
+Projects inside solution:
 1. Emotional Tweets Web: Web Project
 2. Emotional Tweets Model: Definition of business objects
 3. Emotional Tweets Provider: Interface between Web project and external tools (API in this test project)
