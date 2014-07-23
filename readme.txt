@@ -1,3 +1,6 @@
+IMPORTANT NOTE:
+Mashape Sentimental API is not more working.
+
 App Description: 
 Emotional Tweets allows a user to search recent tweets which will then be displayed showing the emotional context alongside.
 
